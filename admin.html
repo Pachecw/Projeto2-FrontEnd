@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Cadastro de Usuários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Administração de Usuários</h1>
+    <nav>
+      <a href="index.html">Voltar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>📋 Cadastrar Novo Usuário</h2>
+      <form id="formUsuario">
+        <input type="text" id="nome" placeholder="Nome do Usuário" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Cadastrar</button>
+        <button type="button" onclick="limparCampos()">Limpar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>👥 Lista de Usuários</h2>
+      <input type="text" id="pesquisa" placeholder="Pesquisar por nome ou email" onkeyup="pesquisarUsuarios()">
+      <ul id="listaUsuarios"></ul>
+      <button onclick="excluirTodosUsuarios()">Excluir Todos</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projeto ODS 7 - Admin</p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
